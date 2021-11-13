@@ -1,4 +1,4 @@
-import Button from 'components/Button';
+import BackButton from 'components/BackButton';
 
 import Logo from 'components/Logo';
 import MediaMatch from 'components/MediaMatch';
@@ -54,9 +54,11 @@ const Footer = () => (
 
         <MediaMatch lessThan="medium">
           <S.Copyright>
-            <S.Icon src={'/img/copy-icon.png'} />
+            <S.CopyIcon src={'/img/copy-icon.png'} />
             <S.Text>Copyright 2021. All Right Reserved </S.Text>
           </S.Copyright>
+
+          <BackButton />
         </MediaMatch>
       </S.ColumnWrapper>
     </S.Top>
@@ -68,19 +70,19 @@ const Footer = () => (
       </S.StoreWrapper>
       <S.Bottom>
         <S.Copyright>
-          <S.Icon src={'/img/copy-icon.png'} />
+          <S.CopyIcon src={'/img/copy-icon.png'} />
           <S.Text>Copyright 2021. All Right Reserved </S.Text>
         </S.Copyright>
 
-        <>
+        <div>
           <S.Socials>
             <S.Icon src={'/img/Vector.png'}></S.Icon>
             <S.Icon src={'/img/Vector-1.png'}></S.Icon>
             <S.Icon src={'/img/Vector-2.png'}></S.Icon>
           </S.Socials>
 
-          <Button size="small">Seta</Button>
-        </>
+          <BackButton />
+        </div>
       </S.Bottom>
     </MediaMatch>
   </S.Wrapper>

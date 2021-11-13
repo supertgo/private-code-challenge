@@ -21,6 +21,9 @@ const wrapperModiffiers = {
     color: ${theme.colors.black};
   `,
 
+  gradient: (theme: DefaultTheme) => css`
+    color: ${theme.colors.white};
+  `,
   withIcon: () => css`
     display: flex;
     flex-direction: row;
@@ -39,8 +42,9 @@ export const Wrapper = styled.button<WrapperProps>`
     align-items: center;
     text-align: center;
     font-size: ${theme.font.sizes.large};
+    font-weight: ${theme.font.bold};
     border-radius: ${theme.border.small};
-    background-color: ${theme.colors[color!]};
+    background: ${theme.colors[color!]};
 
     ${icon && size !== 'small' && wrapperModiffiers.withIcon()};
     ${!!size && wrapperModiffiers[size]()};

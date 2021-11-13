@@ -14,12 +14,14 @@ export default {
     normal: 400,
     bold: 600,
     sizes: {
+      xxsmall: '0.8rem',
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
       large: '1.8rem',
       xlarge: '2.0rem',
-      xxlarge: '2.8rem'
+      xxlarge: '2.8rem',
+      huge: '4rem'
     }
   },
   colors: {
@@ -30,7 +32,8 @@ export default {
     lightGray: '#F8F8F8',
     gray: '#7B7B7B',
     blue: '#32B5FF',
-    orange: '#FF9900'
+    orange: '#FF9900',
+    gradient: 'linear-gradient(145.09deg, #26E9CF 11.81%, #25CDE1 95.89%)'
   },
   spacings: {
     xxsmall: '0.8rem',

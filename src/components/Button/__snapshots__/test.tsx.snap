@@ -10,8 +10,9 @@ exports[`<Button /> should render the heading 1`] = `
   align-items: center;
   text-align: center;
   font-size: 1.8rem;
+  font-weight: 600;
   border-radius: 0.4rem;
-  background-color: #252160;
+  background: #252160;
   width: 30rem;
   color: #FFFFFF;
 }

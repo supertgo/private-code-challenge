@@ -2,10 +2,13 @@ import media from 'styled-media-query';
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.main`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 ${theme.spacings.xxlarge};
+  `}
 `;
 
 export const LogoWrapper = styled.div`

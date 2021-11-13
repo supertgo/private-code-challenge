@@ -23,8 +23,10 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/bootstrap": "^10.34.0",
     "@styled-icons/entypo": "^10.34.0",
     "@styled-icons/evaicons-solid": "^10.34.0",
+    "@styled-icons/icomoon": "^10.34.0",
     "next": "11.1.2",
     "next-pwa": "^5.3.1",
     "react": "17.0.2",

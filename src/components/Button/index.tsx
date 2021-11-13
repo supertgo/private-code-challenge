@@ -9,7 +9,7 @@ type ButtonType =
   | ButtonHTMLAttributes<HTMLButtonElement>;
 
 export type ButtonProps = {
-  color?: 'primary' | 'secundary';
+  color?: 'primary' | 'secundary' | 'gradient';
   size?: 'small' | 'medium' | 'large';
   icon?: boolean;
   children: React.ReactNode;

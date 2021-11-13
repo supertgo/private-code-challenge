@@ -1,24 +1,41 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
+import * as BackButtonStyles from 'components/BackButton/styles';
+
 export const Wrapper = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: ${theme.spacings.medium};
+    margin-top: ${theme.spacings.xlarge};
+  `}
 `;
 
 export const Top = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 
-  ${media.greaterThan('medium')`
+    ${media.greaterThan('medium')`
     max-width: 117rem;
+    flex-direction: row;
+  `}
+
+    ${BackButtonStyles.Wrapper} {
+      margin-top: ${theme.spacings.xxlarge};
+    }
   `}
 `;
 
 export const LogoWrapper = styled.div`
-  width: 17rem;
+  ${media.lessThan('medium')`
+    margin-bottom: 5rem;
+    max-width: 17rem;
+  `}
 
   ${media.greaterThan('medium')`
     align-self: start;
@@ -30,7 +47,6 @@ export const ColumnWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: center;
 
   ${media.greaterThan('medium')`
     flex-direction: row;
@@ -39,8 +55,11 @@ export const ColumnWrapper = styled.div`
 
 export const Column = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
   width: 23rem;
+  height: 13rem;
 `;
 
 export const Title = styled.p`
@@ -53,6 +72,11 @@ export const Title = styled.p`
 
 export const TextWrapper = styled.div`
   ${({ theme }) => css`
+    ${Text} {
+      &:not(:last-child) {
+        margin-bottom: ${theme.spacings.xsmall};
+      }
+    }
     ${media.lessThan('medium')`
       margin-bottom: ${theme.spacings.small};
     `}
@@ -81,11 +105,30 @@ export const Icon = styled.img``;
 export const Copyright = styled.div`
   ${({ theme }) => css`
     display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-top: ${theme.spacings.xlarge};
+
+    ${media.lessThan('medium')`
+      ${CopyIcon} {
+        margin-bottom: 2rem;
+      }
+    `}
+
+    ${media.greaterThan('medium')`
+      flex-direction: row;
+
+      ${CopyIcon} {
+        margin-right: 2rem;
+      }
+    `}
   `}
 `;
 
-export const CopyIcon = styled.img;
+export const CopyIcon = styled.img`
+  width: 2rem;
+  height: 2rem;
+`;
 
 export const StoreWrapper = styled.div`
   align-items: center;
@@ -100,12 +143,22 @@ export const StoreWrapper = styled.div`
 `;
 
 export const Bottom = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 2px solid rgba(84, 84, 212, 0.34);
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid rgba(84, 84, 212, 0.34);
 
-  ${media.greaterThan('medium')`
-    max-width: 117rem;
+    ${media.greaterThan('medium')`
+    div {
+      align-items: center;
+      display: flex;
+    }
+
+    ${BackButtonStyles.Wrapper} {
+      margin-top: ${theme.spacings.medium};
+      margin-left: ${theme.spacings.xlarge};
+    }
+  `}
   `}
 `;
