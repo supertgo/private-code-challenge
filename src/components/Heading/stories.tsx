@@ -10,7 +10,7 @@ export const Default: Story<HeadingProps> = (args) => <Heading {...args} />;
 
 Default.args = {
   children: 'Depoimentos',
-  color: 'secundary'
+  color: 'blue'
 };
 
 export const Small: Story<HeadingProps> = (args) => <Heading {...args} />;

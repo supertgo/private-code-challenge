@@ -34,6 +34,7 @@ export const Wrapper = styled.div<WrapperProps>`
     ${wrapperModiffiers[aligment!](theme)};
 
     ${media.greaterThan('medium')`
+      text-align: left; 
       align-items: start;
       max-width: 50rem;
     `}
@@ -44,6 +45,12 @@ export const Content = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.gray};
     font-size: ${theme.font.sizes.xsmall};
+
+    ${media.greaterThan('medium')`
+      max-width: 60rem;
+      font-size: ${theme.font.sizes.xlarge};
+     
+    `}
   `}
 `;
 

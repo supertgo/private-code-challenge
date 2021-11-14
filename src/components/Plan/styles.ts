@@ -25,12 +25,14 @@ export const Wrapper = styled.div<WrapperProps>`
     padding: ${theme.spacings.medium} ${theme.spacings.small}
       ${theme.spacings.medium} ${theme.spacings.small};
     border-radius: ${theme.border.medium};
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
     ${!!color && wrapperModiffiers[color](theme)}
-
     ${media.greaterThan('medium')`
-      max-width: 40rem;
-    `}
+      max-width: 57rem;
+      max-height: 70rem;
+      padding: ${theme.spacings.xxlarge};
+    `};
   `}
 `;
 
@@ -51,15 +53,23 @@ export const Title = styled.p`
   ${({ theme }) => css`
     color: white;
     font-size: ${theme.font.sizes.medium};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xxlarge};
+    `}
   `}
 `;
 
 export const Text = styled.p`
   ${({ theme }) => css`
     align-self: start;
-    margin: ${theme.spacings.small} 0 ${theme.spacings.small};
+    margin: ${theme.spacings.xxsmall} 0 ${theme.spacings.small};
     color: ${theme.colors.blue};
     font-size: ${theme.font.sizes.xsmall};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+    `}
   `}
 `;
 
@@ -68,6 +78,10 @@ export const AcessTime = styled.p`
     color: #3c5882;
     font-size: ${theme.font.sizes.xsmall};
     margin-bottom: ${theme.spacings.xxsmall};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+    `}
   `}
 `;
 
@@ -92,6 +106,10 @@ export const Benefits = styled.p`
     color: white;
     width: 23rem;
     font-size: ${theme.font.sizes.xxsmall};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.small};
+    `}
   `}
 `;
 
@@ -102,7 +120,12 @@ export const Bottom = styled.div`
     margin-top: ${theme.spacings.xsmall};
 
     ${ButtonStyles.Wrapper} {
+      align-self: end;
       font-size: ${theme.font.sizes.xsmall};
+
+      ${media.greaterThan('medium')`
+        font-size: ${theme.font.sizes.medium};
+      `}
     }
   `}
 `;
@@ -121,6 +144,10 @@ export const Price = styled.span`
     color: ${theme.colors.white};
     font-weight: 800;
     font-size: ${theme.font.sizes.xlarge};
+
+    ${media.greaterThan('medium')`
+      font-size: 4rem;
+    `}
   `}
 `;
 
@@ -129,6 +156,10 @@ export const PromotionalPrice = styled.span`
     font-weight: 300;
     color: rgba(255, 255, 255, 0.45);
     font-size: ${theme.font.sizes.xxsmall};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.small};
+    `}
   `}
 `;
 
@@ -138,21 +169,34 @@ export const Currency = styled.span`
     font-size: ${theme.font.sizes.xsmall};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.secundary};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+    `}
   `}
 `;
 
 export const TypePayment = styled.span`
   ${({ theme }) => css`
-    align-self: center;
+    align-self: end;
     color: rgba(255, 255, 255, 0.45);
     font-size: ${theme.font.sizes.xxsmall};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.small};
+    `}
   `}
 `;
 
 export const AditionalInformation = styled.p`
   ${({ theme }) => css`
+    margin-top: ${theme.spacings.xxsmall};
     padding-left: ${theme.spacings.xxsmall};
     color: rgba(255, 255, 255, 0.45);
     font-size: ${theme.font.sizes.xxsmall};
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.small};
+    `}
   `}
 `;

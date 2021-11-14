@@ -34,10 +34,10 @@ describe('<Heading />', () => {
   });
 
   it('should render the secundary color when passed', () => {
-    renderWithTheme(<Heading color="secundary">children</Heading>);
+    renderWithTheme(<Heading color="blue">children</Heading>);
 
     expect(screen.getByRole('heading', { name: /children/i })).toHaveStyle({
-      color: '#3AFFE5'
+      color: '#32B5FF'
     });
   });
 });

@@ -8,13 +8,12 @@ export const Wrapper = styled.section`
 
   ${media.greaterThan('medium')`
     align-items: start;
-  
   `}
 `;
 
 export const Titles = styled.div`
   ${({ theme }) => css`
-    margin-bottom: ${theme.spacings.xxsmall};
+    margin-bottom: ${theme.spacings.medium};
 
     h2 {
       margin-bottom: ${theme.spacings.xxsmall};

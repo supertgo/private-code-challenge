@@ -137,5 +137,5 @@ export const BannerBlock = styled.div`
 `;
 
 export const BannerImage = styled.img`
-  width: 100%;
+  width: fit-content;
 `;
