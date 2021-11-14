@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Exam /> should render the heading 1`] = `
+.c0 {
+  width: 100%;
+  max-width: 18rem;
+}
+
+<img
+  aria-label="exam image"
+  class="c0"
+  src="/img/enem.png"
+/>
+`;
+
+exports[`<Exam /> should render the heading 2`] = `
+.c0 {
+  width: 19rem;
+  height: 19rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1 {
+  width: 100%;
+  max-width: 18rem;
+}
+
+<div
+  class="c0"
+>
+  <img
+    aria-label="exam image"
+    class="c1"
+    src="/img/enem.png"
+  />
+</div>
+`;
