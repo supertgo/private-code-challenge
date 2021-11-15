@@ -1,7 +1,19 @@
+## Proposta
 
-## What is inside?
+Site hospedado na vercel https://private-code-challenge-supertgo.vercel.app/
 
-This project uses lot of stuff as:
+Esse projeto foi realizado durante o desafio da [private code](https://privatecode.com.br/) para aplicação de uma vaga de front-end.
+
+O objetivo era replicar o layout da landing page presente no [Figma](https://www.figma.com/file/ESJgBz1dpcImjUwe4pcLex/Desafio?node-id=0%3A1) utilizando os seguintes requisitos: 
+
+  - A aplicação deve ser responsivo atendendo a versão web e mobile;
+  - Fidelidade ao layout;
+  - Utilização das tecnologias HTML, CSS e JS;
+  - Publicar a aplicação e compartilhar o link de acesso
+ 
+## Tecnologias
+
+Dentre as demais utilizadas, as principais tecnologias são essas
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
@@ -13,9 +25,9 @@ This project uses lot of stuff as:
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 
-## Getting Started
+## Como testar no seu computador
 
-First, run the development server:
+Após baixar o repositório, rode um dos seguintes comandos no terminal:
 
 ```bash
 npm run dev
@@ -23,19 +35,19 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra a url no link: [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Commands
 
-- `dev`: runs your application on `localhost:3000`
-- `build`: creates the production build version
-- `start`: starts a simple server with the build production code
-- `lint`: runs the linter in all components and pages
-- `test`: runs jest to test all components and pages
-- `test:watch`: runs jest in watch mode
-- `storybook`: runs storybook on `localhost:6006`
-- `build-storybook`: create the build version of storybook
+## Comandos
+
+- `dev`: Roda a aplicação no `localhost:3000`
+- `build`: Cria uma versão de build
+- `start`: Inicia um servidor em build
+- `lint`: Roda os linters em todos os arquivos que foram monitorados
+- `test`: Roda o Jest para testar todos os componentes da aplicação
+- `test:watch`: Roda o Jest em watch mode
+- `storybook`: Roda o Storybook no`localhost:6006`
+
 
 
