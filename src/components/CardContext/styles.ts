@@ -24,6 +24,7 @@ const wrapperModiffiers = {
 
 export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, aligment }) => css`
+    margin: auto;
     align-items: center;
     display: flex;
     max-width: 30rem;

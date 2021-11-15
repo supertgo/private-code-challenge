@@ -22,7 +22,7 @@ const CardContext = ({
       <S.Content>{content}</S.Content>
     </Section>
     <S.BannerImage>
-      <S.Image src={image} />
+      <S.Image src={image} aria-label="A boy writing down" />
     </S.BannerImage>
   </S.Wrapper>
 );
