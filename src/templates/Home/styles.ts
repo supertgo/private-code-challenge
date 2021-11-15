@@ -82,11 +82,17 @@ export const SectionPlans = styled.section`
 
 export const PlansWrapper = styled.div`
   ${({ theme }) => css`
-    ${media.greaterThan('medium')`
-    display: grid;
-    grid-gap: ${theme.spacings.xxlarge};
-    grid-template-columns: 1fr 1fr;
+    ${media.lessThan('medium')`
+    & > div {
+      margin: ${theme.spacings.small};
+    }
   `}
+
+    ${media.greaterThan('medium')`
+      display: grid;
+      grid-gap: ${theme.spacings.xxlarge};
+      grid-template-columns: 1fr 1fr;
+  `};
   `}
 `;
 
@@ -107,7 +113,7 @@ export const SectionDownload = styled.section`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column-reverse;
-    height: 100rem;
+    justify-content: center;
     background-color: ${theme.colors.primary};
 
     ${media.greaterThan('medium')`
@@ -121,21 +127,20 @@ export const SectionDownload = styled.section`
 export const DownloadBanner = styled.div`
   display: flex;
   position: relative;
-
+  max-height: 47rem;
   justify-content: center;
 
   ${media.greaterThan('medium')`
     justify-content: flex-end;
-    height: 70rem;
+    max-height: 70rem;
   `}
 `;
 
 export const DownloadImage = styled.img`
-  width: 100%;
-  height: fit-content;
+  max-width: 30rem;
 
   ${media.greaterThan('medium')`
-    width: fit-content;
+    max-width: 48rem;
     position: absolute;
     height: auto;
     top: -6rem;
