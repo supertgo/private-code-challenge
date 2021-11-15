@@ -121,15 +121,19 @@ export const SectionDownload = styled.section`
 export const DownloadBanner = styled.div`
   display: flex;
   position: relative;
-  height: 70rem;
+
   justify-content: center;
 
   ${media.greaterThan('medium')`
     justify-content: flex-end;
+    height: 70rem;
   `}
 `;
 
 export const DownloadImage = styled.img`
+  width: 100%;
+  height: fit-content;
+
   ${media.greaterThan('medium')`
     width: fit-content;
     position: absolute;
