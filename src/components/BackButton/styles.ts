@@ -1,4 +1,7 @@
 import styled, { css } from 'styled-components';
+import { BackButtonProps } from '.';
+
+export type WrapperProps = Pick<BackButtonProps, 'color'>;
 
 export const Wrapper = styled.button`
   ${({ theme }) => css`

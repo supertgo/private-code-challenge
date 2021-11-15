@@ -25,4 +25,14 @@ describe('<Menu />', () => {
     expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true');
     expect(fullMenuElement).toHaveStyle({ opacity: 0 });
   });
+
+  it('should close menu and clicked', () => {
+    renderWithTheme(<Menu />);
+    const fullMenuElement = screen.getByRole('navigation', { hidden: true });
+    const menuNav = screen.getByLabelText('menu nav');
+
+    fireEvent.click(menuNav);
+    expect(fullMenuElement.getAttribute('aria-hidden')).toBe('true');
+    expect(fullMenuElement).toHaveStyle({ opacity: 0 });
+  });
 });

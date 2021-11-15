@@ -50,6 +50,7 @@ export const Content = styled.div`
 
     ${media.greaterThan('medium')`
       text-align: start;
+      font-size: ${theme.font.sizes.large};
   `}
   `}
 `;

@@ -3,6 +3,10 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
+    ${media.lessThan('medium')`
+      padding-right: 1rem;
+    `}
+
     ${media.lessThan('huge')`
       overflow-x: hidden;
     `}
@@ -26,20 +30,28 @@ export const Wrapper = styled.section`
       margin: 0 -${theme.spacings.xxsmall};
     }
 
+    ${media.greaterThan('medium')`
+      .slick-slide > div {
+        margin: 0 ${theme.spacings.xxsmall};
+        width: 37rem;
+      }
+    `}
+
     ${media.greaterThan('large')`
       .slick-slide > div {
-        margin: 0 ${theme.spacings.xsmall};
+        margin: 0 ${theme.spacings.xxsmall};
+        width: 37rem;
        
       }
       .slick-list {
-        margin: 0 -${theme.spacings.xsmall};
+        margin: 0 -${theme.spacings.xxsmall};
       }
     `}
 
     .slick-prev,
     .slick-next {
       display: block;
-      color: ${theme.colors.gray};
+      color: ${theme.colors.primary};
       cursor: pointer;
       position: absolute;
       top: 50%;
@@ -54,7 +66,7 @@ export const Wrapper = styled.section`
     }
 
     .slick-next {
-      right: ${theme.spacings.xxlarge};
+      right: ${theme.spacings.xxsmall};
     }
 
     .slick-prev.slick-disabled,

@@ -4,6 +4,7 @@ export const Wrapper = styled.main`
   ${({ theme }) => css`
     max-width: 34rem;
     padding: ${theme.spacings.small};
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.22);
   `}
 `;
 

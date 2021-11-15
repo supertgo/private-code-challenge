@@ -6,7 +6,7 @@ import MediaMatch from 'components/MediaMatch';
 import * as S from './styles';
 
 const Footer = () => (
-  <S.Wrapper>
+  <S.Wrapper id="footer">
     <S.Top>
       <S.LogoWrapper>
         <Logo />

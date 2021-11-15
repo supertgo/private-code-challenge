@@ -1,5 +1,7 @@
 import Footer from 'components/Footer';
 import Menu from 'components/Menu';
+import { Container } from 'components/Container';
+
 import * as S from './styles';
 
 export type BaseProps = {
@@ -8,9 +10,14 @@ export type BaseProps = {
 
 const Base = ({ children }: BaseProps) => (
   <S.Wrapper>
-    <Menu />
+    <Container>
+      <Menu />
+    </Container>
     {children}
-    <Footer />
+
+    <Container>
+      <Footer />
+    </Container>
   </S.Wrapper>
 );
 

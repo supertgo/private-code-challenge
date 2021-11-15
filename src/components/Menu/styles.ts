@@ -1,13 +1,47 @@
-import media from 'styled-media-query';
+import media, { generateMedia } from 'styled-media-query';
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.main`
+import * as LogoStyles from 'components/Logo/styles';
+
+const customMedia = generateMedia({
+  firstBreak: '970px',
+  secondBreak: '860px',
+  thirdBreak: '808px'
+});
+
+export const Wrapper = styled.header`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
     width: 100%;
+    height: 6rem;
     justify-content: space-between;
-    padding: 0 ${theme.spacings.xxlarge};
+
+    ${media.greaterThan('medium')`
+      max-width: 144rem;
+      margin: auto;
+      padding: 0 ${theme.spacings.xxlarge};
+    `}
+
+    ${customMedia.lessThan('firstBreak')`
+       padding: 0;
+    `}
+
+    ${customMedia.lessThan('secondBreak')`
+       ${LogoStyles.Wrapper} {
+         svg {
+          max-width: 15rem;
+         }
+       }
+    `}
+
+    ${customMedia.lessThan('thirdBreak')`
+      
+
+      ${MenuLink} {
+        margin: ${theme.spacings.xsmall} ${theme.spacings.xsmall} 0;
+      }
+    `}
   `}
 `;
 
@@ -22,9 +56,19 @@ export const LogoWrapper = styled.div`
   `}
 `;
 
+export const MenuGroup = styled.div`
+  display: none;
+
+  ${media.greaterThan('medium')`
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+  `}
+`;
+
 export const MenuNav = styled.div`
   ${({ theme }) => css`
-    width: 100%;
     ${media.greaterThan('medium')`
 
 			margin-left: ${theme.spacings.small};
@@ -36,11 +80,9 @@ export const MenuLink = styled.a`
   ${({ theme }) => css`
     text-decoration: none;
     color: ${theme.colors.primary};
-    margin: 0.3rem ${theme.spacings.small} 0;
+    margin: ${theme.spacings.small} ${theme.spacings.small} 0;
   `}
 `;
-
-export const MenuGroup = styled.div``;
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`

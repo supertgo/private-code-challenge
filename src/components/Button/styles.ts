@@ -40,6 +40,7 @@ export const Wrapper = styled.button<WrapperProps>`
     border: none;
     height: 4.3rem;
     align-items: center;
+    cursor: pointer;
     text-align: center;
     font-size: ${theme.font.sizes.large};
     font-weight: ${theme.font.bold};

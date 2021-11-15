@@ -38,6 +38,7 @@ export const Wrapper = styled.div<WrapperProps>`
 
 export const Top = styled.div`
   ${({ theme }) => css`
+    height: 10rem;
     display: grid;
     grid-gap: ${theme.spacings.xsmall};
     grid-template-columns: 1.5fr 0.5fr;

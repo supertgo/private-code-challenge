@@ -30,7 +30,7 @@ const Menu = () => {
         </MediaMatch>
       </S.LogoWrapper>
 
-      <MediaMatch greaterThan="medium">
+      <S.MenuGroup>
         <S.MenuNav>
           <Link href="#" passHref>
             <S.MenuLink>Home</S.MenuLink>
@@ -40,19 +40,18 @@ const Menu = () => {
             <S.MenuLink>Quem somos</S.MenuLink>
           </Link>
 
-          <Link href="#" passHref>
+          <Link href="#planos" passHref>
             <S.MenuLink>Planos</S.MenuLink>
           </Link>
 
-          <Link href="#" passHref>
+          <Link href="#footer" passHref>
             <S.MenuLink>Fale conosco</S.MenuLink>
           </Link>
         </S.MenuNav>
-      </MediaMatch>
-
-      <MediaMatch greaterThan="medium">
         <Button size="small">Entrar</Button>
-      </MediaMatch>
+      </S.MenuGroup>
+
+      <MediaMatch greaterThan="medium"></MediaMatch>
 
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon
@@ -62,7 +61,7 @@ const Menu = () => {
           color="#FFFFFF"
         />
 
-        <S.MenuNav>
+        <S.MenuNav onClick={() => setIsOpen(false)} aria-label="menu nav">
           <Link href="#" passHref>
             <S.MenuLink>Home</S.MenuLink>
           </Link>
@@ -71,11 +70,11 @@ const Menu = () => {
             <S.MenuLink>Quem somos</S.MenuLink>
           </Link>
 
-          <Link href="#" passHref>
+          <Link href="#planos" passHref>
             <S.MenuLink>Planos</S.MenuLink>
           </Link>
 
-          <Link href="#" passHref>
+          <Link href="#footer" passHref>
             <S.MenuLink>Fale conosco</S.MenuLink>
           </Link>
         </S.MenuNav>

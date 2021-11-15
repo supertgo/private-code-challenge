@@ -15,5 +15,5 @@ Default.args = {
     'Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Ultrices blandit pelle ntesque nibh arcu elementum odio justo. Rhoncus.',
   name: 'Amanda Merien',
   occupation: 'Analista junior',
-  img: 'img/girl-image.png'
+  img: 'img/amanda.png'
 };

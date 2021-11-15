@@ -8,6 +8,7 @@ exports[`<Button /> should render the heading 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 600;

@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
+      scroll-behavior: smooth;
     }
 
     body {

@@ -9,7 +9,7 @@ export default {
 export const Default: Story<ServiceProps> = (args) => <Service {...args} />;
 
 Default.args = {
-  img: 'img/group-56.png',
+  img: 'img/service-first.png',
   title: '100% focado na Matemática',
   content:
     'Todo material é construído por profissionais especializados e com foco no perfil de cada vestibular.'

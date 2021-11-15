@@ -16,6 +16,16 @@ export const Wrapper = styled.main`
     ${media.greaterThan('medium')`
       grid-template-columns: 1fr 1fr;
     `};
+
+    @keyframes upDown {
+      from {
+        top: 0px;
+      }
+
+      to {
+        top: 50px;
+      }
+    }
   `}
 `;
 
@@ -23,8 +33,13 @@ export const BannerContent = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
-
+    justify-content: center;
+    max-height: 79rem;
     background-color: ${theme.colors.primary};
+
+    ${media.greaterThan('medium')`
+      justify-content: center;
+    `}
   `}
 `;
 
@@ -35,7 +50,7 @@ export const Content = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    max-height: 82rem;
 
     div {
       margin: ${theme.spacings.medium} 0 ${theme.spacings.xxsmall} 0;
@@ -127,6 +142,8 @@ export const Text = styled.p`
 
 export const BannerBlock = styled.div`
   ${({ theme }) => css`
+    max-width: 52rem;
+    max-height: 52rem;
     position: relative;
     background-color: ${theme.colors.primary};
 
@@ -137,5 +154,5 @@ export const BannerBlock = styled.div`
 `;
 
 export const BannerImage = styled.img`
-  width: fit-content;
+  width: 100%;
 `;

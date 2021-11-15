@@ -1,145 +1,150 @@
+import Base from 'templates/Base';
 import Banner from 'components/Banner';
 import Button from 'components/Button';
-import CardContext from 'components/CardContext';
-import MediaMatch from 'components/MediaMatch';
-import Plan from 'components/Plan';
-import ReviewSlider from 'components/ReviewSlider';
 import Section from 'components/Section';
-import Service from 'components/Service';
-import Base from 'templates/Base';
+import MediaMatch from 'components/MediaMatch';
 import ExamSlider from 'components/ExamSlider';
+import ReviewSlider from 'components/ReviewSlider';
+import StudentsSlider from 'components/StudentsSlider';
 
-import mockReview from 'components/ReviewSlider/mock';
-import mockExams from 'components/ExamSlider/mock';
+import { ExamProps } from 'components/Exam';
+import { Container } from 'components/Container';
+import { CardReviewProps } from 'components/CardReview';
+
+import Plan, { PlanProps } from 'components/Plan';
+import Service, { ServiceProps } from 'components/Service';
+import CardContext, { CardContextProps } from 'components/CardContext';
 
 import * as S from './styles';
 
-const Home = () => (
+export type HomeTemplateProps = {
+  reviews: CardReviewProps[];
+  exams: ExamProps[];
+  plans: PlanProps[];
+  services: ServiceProps[];
+  calls: CardContextProps[];
+};
+
+const Home = ({
+  reviews,
+  exams,
+  plans,
+  services,
+  calls
+}: HomeTemplateProps) => (
   <S.Wrapper>
     <Base>
       <>
-        <Banner />
+        <S.SectionBanner id="home">
+          <Container>
+            <Banner />
+          </Container>
+        </S.SectionBanner>
 
         <S.SectionExams>
-          <ExamSlider items={mockExams} />
+          <Container>
+            <ExamSlider items={exams} />
+          </Container>
         </S.SectionExams>
-        <S.SectionServices>
-          <S.Services>
-            <Service
-              img="img/group-56.png"
-              title="100% focado na Matemática"
-              content="Todo material é construído por profissionais especializados e com foco no perfil de cada vestibular."
-            />
 
-            <Service
-              img="img/group-56.png"
-              title="100% focado na Matemática"
-              content="Todo material é construído por profissionais especializados e com foco no perfil de cada vestibular."
-            />
+        <Container>
+          <S.SectionServices>
+            <S.Services>
+              {services.map(({ img, title, content }) => (
+                <Service
+                  key={title}
+                  img={img}
+                  title={title}
+                  content={content}
+                />
+              ))}
 
-            <Service
-              img="img/group-56.png"
-              title="100% focado na Matemática"
-              content="Todo material é construído por profissionais especializados e com foco no perfil de cada vestibular."
-            />
+              <Button icon>Quero ser aprovado</Button>
+            </S.Services>
 
-            <Button icon>Quero ser aprovado</Button>
-          </S.Services>
+            <S.BannerImage>
+              <StudentsSlider />
+            </S.BannerImage>
+          </S.SectionServices>
+        </Container>
 
-          <S.BannerImage>
-            <S.Image src="img/pretty-teenager-happy-to-be-back-at-university.png" />
-          </S.BannerImage>
-        </S.SectionServices>
         <S.SectionCall>
-          <MediaMatch lessThan="medium">
-            <CardContext
-              image="/img/image-45.png"
-              title="100% MATEMÁTICA"
-              subtitle="Matemática para quem quer entrar na facul."
-              content="Somos um cursinho online especialista em ensinar matemática. Temos os melhores professores mestres e doutores para tirar suas dúvidas e te ensinar matemática desde a teoria até a resolução de exercícios de todos os níveis."
-            ></CardContext>
-            <CardContext
-              image="/img/image-43.png"
-              title="QUER SER APROVADO?"
-              subtitle="Se seu foco é ser aprovado, nós estamos aqui por você."
-              content="Somos um cursinho online especialista em ensinar matemática. Temos os melhores professores mestres e doutores para tirar suas dúvidas e te ensinar matemática desde a teoria até a resolução de exercícios de todos os níveis."
-            ></CardContext>
-          </MediaMatch>
+          <Container>
+            <MediaMatch lessThan="medium">
+              {calls.map(({ image, title, subtitle, content }) => (
+                <CardContext
+                  key={title}
+                  title={title}
+                  image={image}
+                  subtitle={subtitle}
+                  content={content}
+                ></CardContext>
+              ))}
+            </MediaMatch>
 
-          <MediaMatch greaterThan="medium">
-            <CardContext
-              aligment="bottom"
-              image="/img/image-45.png"
-              title="QUER SER APROVADO?"
-              subtitle="Se seu foco é ser aprovado, nós estamos aqui por você."
-              content="Somos um cursinho online especialista em ensinar matemática. Temos os melhores professores mestres e doutores para tirar suas dúvidas e te ensinar matemática desde a teoria até a resolução de exercícios de todos os níveis."
-            ></CardContext>
-          </MediaMatch>
+            <MediaMatch greaterThan="medium">
+              <CardContext
+                aligment="bottom"
+                image="/img/image-45.png"
+                title="QUER SER APR APROVADO?"
+                subtitle="Se seu foco é ser aprovado, nós estamos aqui por você."
+                content="Somos um cursinho online especialista em ensinar matemática. Temos os melhores professores mestres e doutores para tirar suas dúvidas e te ensinar matemática desde a teoria até a resolução de exercícios de todos os níveis."
+              ></CardContext>
+            </MediaMatch>
 
-          <MediaMatch greaterThan="medium">
-            <CardContext
-              image="/img/image-43.png"
-              title="100% MATEMÁTICA"
-              subtitle="Matemática para quem quer entrar na facul."
-              content="Somos um cursinho online especialista em ensinar matemática. Temos os melhores professores mestres e doutores para tirar suas dúvidas e te ensinar matemática desde a teoria até a resolução de exercícios de todos os níveis."
-            ></CardContext>
-          </MediaMatch>
+            <MediaMatch greaterThan="medium">
+              <CardContext
+                title="100% MATEMÁTICA"
+                subtitle="Matemática para quem quer entrar na facul."
+                content="Somos um cursinho online especialista em ensinar matemática. Temos os melhores professores mestres e doutores para tirar suas dúvidas e te ensinar matemática desde a teoria até a resolução de exercícios de todos os níveis."
+                image="/img/image-43.png"
+              ></CardContext>
+            </MediaMatch>
+          </Container>
         </S.SectionCall>
 
-        <S.SectionPlans>
-          <Section title="NOSSOS PLANOS" subtitle="Invista no seu futuro">
-            <S.PlansWrapper>
-              <Plan
-                color="primary"
-                acessTime="1 ano"
-                title="Plano Recomendado"
-                price="178,80"
-                benefits={[
-                  'Acesso a todos os benefícios da Plataforma (Videoaulas, Exercícios, Apostilas e muito mais)',
-                  '36 aulas ao vivo',
-                  'Revisão para o ENEM',
-                  'Grupo no Whatsapp com professores e alunos',
-                  'Reforço para FUVEST, Unicamp e Vestibulares de Medicina'
-                ]}
-                promotionalPrice="49,90"
-                aditionalInformation="Menos de 5 reais por mês :)"
-                typePayment="ano"
-              />
+        <Container>
+          <S.SectionPlans id="planos">
+            <Section title="NOSSOS PLANOS" subtitle="Invista no seu futuro">
+              <S.PlansWrapper>
+                <Plan
+                  color="primary"
+                  acessTime={plans[0].acessTime}
+                  title={plans[0].title}
+                  price={plans[0].price}
+                  promotionalPrice={plans[0].promotionalPrice}
+                  benefits={plans[0].benefits}
+                  aditionalInformation={plans[0].aditionalInformation}
+                  typePayment={plans[0].typePayment}
+                />
 
-              <Plan
-                color="white"
-                acessTime="1 ano"
-                title="Plano Recomendado"
-                price="178,80"
-                benefits={[
-                  'Acesso a todos os benefícios da Plataforma (Videoaulas, Exercícios, Apostilas e muito mais)',
-                  '36 aulas ao vivo',
-                  'Revisão para o ENEM',
-                  'Grupo no Whatsapp com professores e alunos',
-                  'Reforço para FUVEST, Unicamp e Vestibulares de Medicina'
-                ]}
-                promotionalPrice="49,90"
-                aditionalInformation="Menos de 5 reais por mês :)"
-                typePayment="ano"
-              />
-            </S.PlansWrapper>
-          </Section>
-        </S.SectionPlans>
+                <Plan
+                  color="white"
+                  acessTime={plans[1].acessTime}
+                  title={plans[1].title}
+                  price={plans[1].price}
+                  benefits={plans[1].benefits}
+                  typePayment={plans[1].typePayment}
+                />
+              </S.PlansWrapper>
+            </Section>
+          </S.SectionPlans>
 
-        <S.SectionReview>
-          <Section
-            title="DEPOIMENTOS"
-            subtitle="Recomendados por quem é expert no assunto"
-          >
-            <></>
-          </Section>
+          <S.SectionReview>
+            <Section
+              title="DEPOIMENTOS"
+              subtitle="Recomendados por quem é expert no assunto"
+            >
+              <></>
+            </Section>
 
-          <ReviewSlider items={mockReview} />
-        </S.SectionReview>
+            <ReviewSlider items={reviews} />
+          </S.SectionReview>
+        </Container>
 
         <S.SectionDownload>
           <S.DownloadBanner>
-            <S.DownloadImage src={'img/phone.png'} />
+            <S.DownloadImage src={'img/phone.png'} aria-label="Phone image" />
           </S.DownloadBanner>
           <S.DownloadContentWrapper>
             <S.DownloadContent>

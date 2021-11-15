@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
+import * as ContainerStyles from 'components/Container';
+
 export const Wrapper = styled.main``;
 
 export const SectionCall = styled.div`
@@ -11,9 +13,26 @@ export const SectionCall = styled.div`
     justify-content: center;
     background-color: ${theme.colors.lightGray};
 
+    ${ContainerStyles.Container} {
+      display: flex;
+      justify-content: center;
+    }
+
     ${media.greaterThan('medium')`
-    flex-direction: row;
+      flex-direction: row;
+
+      ${ContainerStyles.Container} {
+        & > div {
+          width: 100%;
+        }
+      }
+    `}
   `}
+`;
+
+export const SectionBanner = styled.div`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.primary};
   `}
 `;
 
@@ -50,16 +69,15 @@ export const BannerImage = styled.div`
 `;
 
 export const Image = styled.img`
-  width: fit-content;
+  width: 100%;
+  max-height: 73rem;
 `;
 
 export const SectionExams = styled.div``;
 
 export const SectionPlans = styled.section`
-  ${({ theme }) => css`
-    max-height: 150rem;
-    padding: ${theme.spacings.xxlarge};
-  `}
+  max-height: 150rem;
+  padding: 10rem;
 `;
 
 export const PlansWrapper = styled.div`
@@ -76,8 +94,12 @@ export const SectionReview = styled.section`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: ${theme.spacings.xxlarge};
+    justify-content: flex-start;
+    height: 50rem;
+
+    ${media.greaterThan('medium')`
+      padding: ${theme.spacings.xxlarge};
+    `}
   `}
 `;
 
@@ -124,6 +146,7 @@ export const DownloadContentWrapper = styled.div`
     justify-content: center;
 
     ${media.greaterThan('medium')`
+      justify-content: flex-start;
       padding: 0 ${theme.spacings.xxlarge}  0 ${theme.spacings.xxlarge};
     `}
   `}
