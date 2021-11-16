@@ -10,6 +10,15 @@ O objetivo era replicar o layout da landing page presente no [Figma](https://www
   - Fidelidade ao layout;
   - Utilização das tecnologias HTML, CSS e JS;
   - Publicar a aplicação e compartilhar o link de acesso
+
+## Demos
+
+<img src="/demo/private-code-challenge-desktop.gif" />
+
+<p align="center">
+  <img src="/demo/private-code-challenge-mobile.gif" />
+</p>
+
  
 ## Tecnologias
 
