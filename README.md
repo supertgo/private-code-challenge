@@ -45,7 +45,7 @@ Dentre as demais utilizadas, as principais tecnologias são essas
 - [TypeScript](https://www.typescriptlang.org/) Ferramenta para garantir a tipagem e evitar possíveis erros durante o envio de dados.
 - [NextJS](https://nextjs.org/) Framework para ser aplicado durante a produção da aplicação.
 - [Styled Components](https://styled-components.com/) Ferramenta para utilizar o conceito de CSS in JS e facilitar a mutação dos elementos conforme a viewport.
-- [Jest](https://jestjs.io/) Ferramenta para realizar teste unitários dos principais componentes da aplicação.
+- [Jest](https://jestjs.io/) Ferramenta para realizar testes unitários dos principais componentes da aplicação.
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) Ferramenta para simular o DOM durante a testagem da aplicação.
 - [Storybook](https://storybook.js.org/) Tecnologia utilizada para verfificar e usar, de maneira individual, os compoentes criados.
 - [Eslint](https://eslint.org/) Utilizado para verficiar erros de sintaxe.
