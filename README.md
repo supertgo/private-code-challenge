@@ -42,15 +42,15 @@ O deploy foi realizado na plataforma da Vercel porque o projeto foi desenvolvido
 
 Dentre as demais utilizadas, as principais tecnologias são essas
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [NextJS](https://nextjs.org/)
-- [Styled Components](https://styled-components.com/)
-- [Jest](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- [Storybook](https://storybook.js.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Husky](https://github.com/typicode/husky)
+- [TypeScript](https://www.typescriptlang.org/) Ferramenta para garantir a tipagem e evitar possíveis erros durante o envio de dados.
+- [NextJS](https://nextjs.org/) Framework para ser aplicado durante a produção da aplicação.
+- [Styled Components](https://styled-components.com/) Ferramenta para utilizar o conceito de CSS in JS e facilitar a mutação dos elementos conforme a viewport.
+- [Jest](https://jestjs.io/) Ferramenta para realizar teste unitários dos principais componentes da aplicação.
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) Ferramenta para simular o DOM durante a testagem da aplicação.
+- [Storybook](https://storybook.js.org/) Tecnologia utilizada para verfificar e usar, de maneira individual, os compoentes criados.
+- [Eslint](https://eslint.org/) Utilizado para verficiar erros de sintaxe.
+- [Prettier](https://prettier.io/) Foi utilizado para padronizar a escrita do código.
+- [Husky](https://github.com/typicode/husky) Ferramenta para evitar que erros de sintaxe sejam enviados ao github.
 
 ## Como testar no seu computador
 
