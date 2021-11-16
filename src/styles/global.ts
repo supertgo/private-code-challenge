@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      font-family: ${theme.font.family};
+      font-family: 'Inter', sans-serif;
       font-size: ${theme.font.sizes.medium};
     }
   `}

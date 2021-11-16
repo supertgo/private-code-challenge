@@ -20,6 +20,7 @@ export const Wrapper = styled.h2<WrapperProps>`
   ${({ theme, color, size }) => css`
     color: ${theme.colors[color!]};
     font-weight: ${theme.font.bold};
+    font-family: 'Nunito', sans-serif;
 
     ${!!size && wrapperModiffiers[size](theme)};
   `}

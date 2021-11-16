@@ -117,6 +117,7 @@ export const Heading = styled.h1`
     text-align: center;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.huge};
+    font-family: 'Fredoka One', cursive;
 
     b {
       color: ${theme.colors.secundary};

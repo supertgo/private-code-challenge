@@ -179,11 +179,12 @@ export const Currency = styled.span`
 
 export const TypePayment = styled.span`
   ${({ theme }) => css`
-    align-self: end;
+    align-self: center;
     color: rgba(255, 255, 255, 0.45);
     font-size: ${theme.font.sizes.xxsmall};
 
     ${media.greaterThan('medium')`
+      align-self: end;
       font-size: ${theme.font.sizes.small};
     `}
   `}
