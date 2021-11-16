@@ -4,9 +4,9 @@ Site hospedado na vercel https://private-code-challenge-supertgo.vercel.app/
 
 Esse projeto foi realizado durante o desafio da [private code](https://privatecode.com.br/) para aplicação de uma vaga de front-end.
 
-O objetivo era replicar o layout da landing page presente no [Figma](https://www.figma.com/file/ESJgBz1dpcImjUwe4pcLex/Desafio?node-id=0%3A1) utilizando os seguintes requisitos: 
+O objetivo era replicar o layout da landing page presente no [Figma](https://www.figma.com/file/ESJgBz1dpcImjUwe4pcLex/Desafio?node-id=0%3A1) utilizando os seguintes requisitos com um prazo de 5 dias: 
 
-  - A aplicação deve ser responsivo atendendo a versão web e mobile;
+  - A aplicação deveria ser responsiva atendendo a versão web e mobile;
   - Fidelidade ao layout;
   - Utilização das tecnologias HTML, CSS e JS;
   - Publicar a aplicação e compartilhar o link de acesso
@@ -19,6 +19,24 @@ O objetivo era replicar o layout da landing page presente no [Figma](https://www
   <img src="/demo/private-code-challenge-mobile.gif" />
 </p>
 
+
+## Habilidades desenvolvidas/aprimoradas durante o desenvolvimento do projeto
+
+### Componentes 
+
+O primeiro passo que realizei durante a criação do projeto foi uma varredura pelo arquivo do figma. Sendo assim, busquei as principais incidências e as transformei em componentes como, por exemplo, os botões presentes em quase todas as seções que apenas variavam no tamanho e no conteúdo - com ou sem ícone. Além do mais, criei um arquivo que generaliza, majoritariamente, os espaçamento do items e cores. Ele está presente  em src/styles/theme.ts.
+
+### Testes
+
+Os principais components foram testados unitariamente utilizando as tecnologias Jest e ReactTestingLibrary. 
+
+### Templates
+
+Visando o ampliamento do projeto, separando as responsabilidades e evitando o DRY, criei alguns templates que podem ser reutilizados em páginas futuras. Um exemplo dessa prática é o template "Base", que contém o Menu(Header) e o Footer da aplicação além de receber um children, que é o conteúddo único da página.
+
+### Deploy
+
+O deploy foi realizado na plataforma da Vercel porque o projeto foi desenvolvido em NextJS.
  
 ## Tecnologias
 
