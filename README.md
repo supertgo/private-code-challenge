@@ -2,7 +2,7 @@
 
 Site hospedado na vercel https://private-code-challenge-supertgo.vercel.app/
 
-Esse projeto foi realizado durante o desafio da [private code](https://privatecode.com.br/) para aplicação de uma vaga de front-end.
+Esse projeto foi realizado durante o desafio da [private code](https://privatecode.com.br/) para aplicação de uma vaga remota de front-end.
 
 O objetivo era replicar o layout da landing page presente no [Figma](https://www.figma.com/file/ESJgBz1dpcImjUwe4pcLex/Desafio?node-id=0%3A1) utilizando os seguintes requisitos com um prazo de 5 dias: 
 
