@@ -1,6 +1,6 @@
 ## Proposta
 
-Site hospedado na vercel https://private-code-challenge-supertgo.vercel.app/
+Site hospedado na plataforma vercel https://private-code-challenge-supertgo.vercel.app/
 
 Esse projeto foi realizado durante o desafio da [private code](https://privatecode.com.br/) para aplicação de uma vaga remota de front-end.
 
